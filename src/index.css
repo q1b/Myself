@@ -675,6 +675,10 @@ video {
   pointer-events: none;
 }
 
+.static {
+  position: static;
+}
+
 .fixed {
   position: fixed;
 }
@@ -708,8 +712,8 @@ video {
   right: 0px;
 }
 
-.top-\[280px\] {
-  top: 280px;
+.top-\[190px\] {
+  top: 190px;
 }
 
 .top-\[200px\] {
@@ -722,14 +726,6 @@ video {
 
 .-top-96 {
   top: -24rem;
-}
-
-.top-\[220px\] {
-  top: 220px;
-}
-
-.top-\[190px\] {
-  top: 190px;
 }
 
 .z-0 {
@@ -1849,15 +1845,11 @@ video {
   justify-content: flex-start;
 }
 
+.group:hover .group-hover\:justify-center {
+  justify-content: center;
+}
+
 @media (min-width: 400px) {
-  .xss\:top-\[300px\] {
-    top: 300px;
-  }
-
-  .xss\:top-\[220px\] {
-    top: 220px;
-  }
-
   .xss\:top-\[210px\] {
     top: 210px;
   }
@@ -1939,22 +1931,6 @@ video {
 }
 
 @media (min-width: 500px) {
-  .xs\:top-\[300px\] {
-    top: 300px;
-  }
-
-  .xs\:top-\[230px\] {
-    top: 230px;
-  }
-
-  .xs\:top-\[240px\] {
-    top: 240px;
-  }
-
-  .xs\:top-\[250px\] {
-    top: 250px;
-  }
-
   .xs\:top-\[260px\] {
     top: 260px;
   }
@@ -1995,32 +1971,12 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:top-\[250px\] {
-    top: 250px;
-  }
-
-  .sm\:top-\[400px\] {
-    top: 400px;
-  }
-
-  .sm\:top-\[300px\] {
-    top: 300px;
-  }
-
-  .sm\:top-\[290px\] {
-    top: 290px;
-  }
-
-  .sm\:top-\[280px\] {
-    top: 280px;
-  }
-
-  .sm\:top-\[270px\] {
-    top: 270px;
-  }
-
   .sm\:top-\[260px\] {
     top: 260px;
+  }
+
+  .sm\:top-\[250px\] {
+    top: 250px;
   }
 
   .sm\:ml-4 {
@@ -2159,6 +2115,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:sticky {
+    position: sticky;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
