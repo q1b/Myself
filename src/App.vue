@@ -1,5 +1,5 @@
 <template>
-  <div class="flex antialiased">
+  <div class="flex ">
   <header class="sticky hidden md:flex top-0 left-0 z-0 w-0 h-screen">
     <main-header :right="false" ></main-header>
   </header>

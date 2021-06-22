@@ -1,6 +1,6 @@
 <template>
-    <header :class="[ right ? 'absolute -top-12 right-0':'','select-none flex flex-col items-center z-0 group justify-center min-w-[96px] h-screen bg-transparent']" >
-    <section class="w-12 flex flex-col justify-center items-center group-hover:justify-start z-10 bg-white/20 mb-20 px-1 max-h-[75%] rounded-3xl backdrop-blur-sm backdrop-hue-rotate-180 backdrop-brightness-200 backdrop-saturate-200 backdrop-contrast-200 shadow-md border transition-max-height ease-out duration-1000">
+    <header :class="[ right ? 'absolute right-0':'','select-none flex flex-col items-center z-0 group justify-center min-w-[96px] h-screen bg-transparent']" >
+    <section :class="[right ? 'absolute top-[190px] xss:top-[210px] xs:top-[260px] sm:top-[260px] ':'','w-12 flex flex-col justify-center items-center group-hover:justify-start z-10 bg-white/20 mb-20 px-1 max-h-[75%] rounded-3xl backdrop-blur-sm backdrop-hue-rotate-180 backdrop-brightness-200 backdrop-saturate-200 backdrop-contrast-200 shadow-md border transition-max-height ease-out duration-1000']">
       <functionality v-model:show="show">
      <template v-slot:icon>
         <sun-icon class="text-white w-full h-auto flex transition-opacity delay-1000 duration-700 ease-out"/>
