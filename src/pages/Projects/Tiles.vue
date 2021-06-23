@@ -29,8 +29,8 @@ export default {
             y: y * SIZE,
           }
           console.log(entity)
-          el.style.left = entity.x+ 1 + 'px'
-          el.style.top = entity.y + 1 + 'px'
+          el.style.left = entity.x + 'px'
+          el.style.top = entity.y  + 'px'
           el.style.width = 10 + 'px'
           el.style.height = 10 + 'px'
           el.addEventListener('click', toggle.bind(this, entity))
@@ -50,20 +50,5 @@ export default {
 </script>
 
 <style>
-#tile.grow {
-  animation: grow 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-}
-
-@keyframes grow {
-  0% {
-    transform: scale(1);
-  }
-  30% {
-    transform: scale(2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 </style>

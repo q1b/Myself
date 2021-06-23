@@ -108,22 +108,20 @@ export default {
 
 <style>
 div .tile.grow {
-  animation:grow 2s cubic-bezier(0.9, 1.1, 0, 1) 0s;
+  /* animation:grow 1s cubic-bezier(0.27, 0.81, 0.92, 1.28) 0s; */
+  animation:grow 1.5s cubic-bezier(0.13, 0.11, 0.29, 2) 0s;
 }
 
 @keyframes grow {
-    0.0%{
-        width: 20px;
-        height: 20px;
-    }
-    30%{
-	     width: 200px;
-        height: 200px;
-		  /* box-shadow: 0px 0px 10px 10px #FF0060; */
-    }
-    100%{
-	     width: 20px;
-        height: 20px;
-    }
+  0% {
+    transform: scale(1) translate3d(0px,0px,0px);
+  }
+  30% {
+    transform: scale(1.7) translate3d(0px,-10px,20px);
+  }
+  100% {
+    transform: scale(1) translate3d(0px,0px,0px);
+  }
 }
+
 </style>

@@ -1,8 +1,8 @@
 <template>
-    <section class="flex flex-col w-[calc(100vw+96px)]">
+    <section class="flex flex-col w-[calc(100vw+96px)] z-30">
         <div
             class="w-full select-none "
-             :style="{backgroundColor: '#00202b',backgroundImage: `url(${patternImage})`,animation:`${patternImageAnimation}`}"
+             :style="{backgroundColor:'#00202b',backgroundImage: `url(${patternImage})`,animation:`${patternImageAnimation}`} "
         >
             <div
                 class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:py-16 md:px-8 md:flex md:items-center md:justify-between"
@@ -53,10 +53,10 @@
             </div>
         </div>
         <section
-            class=" lg:px-20 lg:py-10 sm:py-5 sm:px-16 xs:px-10 xs:py-4 xs:text-lg xss:px-8 xss:py-4 text-normal bg-gradient-to-br from-blue-600 via-lightBlue-500 to-lightBlue-800"
+            class=" lg:px-20 lg:py-10 sm:py-5 sm:px-16 xs:px-10 xs:py-4 xs:text-lg xss:px-8 xss:py-4 text-normal bg-gradient-to-br dark:bg-gradient-to-tr from-blue-600 dark:from-lime-400 via-lightBlue-500 to-lightBlue-800 dark:to-emerald-700"
         >
-            <article class="bg-white p-4 xss:rounded-lg font-bold minh100px]">
-                <h1 class="text-xl text-blue-500">
+            <article class="bg-white dark:bg-green-600 p-4 xss:rounded-lg font-bold minh100px]">
+                <h1 class="text-xl text-blue-500 dark:text-white">
                     I am a Web developer, along with learning and exploring
                     things I am also very facinate about the upcomming web
                     technologies like A.I, Cloud computing and Quantum
@@ -65,20 +65,20 @@
                 </h1>
             </article>
         </section>
-        <section class="flex-shrink items-center flex py-10 place-content-center max-h-96 h-full bg-[hsl(220,40%,10%)]">
-            <fieldset class="flex items-center justify-center p-2 border-2 border-white rounded-lg xss:p-3 xs:p-4 sm:p-5 md:p-7 lg:p-10">
+        <section class="flex-shrink items-center flex py-10 place-content-center max-h-96 h-full bg-[hsl(220,40%,10%)] dark:bg-lime-300 ">
+            <fieldset class="flex items-center justify-center p-2 border-2 border-white dark:border-lime-200 rounded-lg xss:p-3 xs:p-4 sm:p-5 md:p-7 lg:p-10">
                 <legend class="px-2 text-white xss:text-xl">You might like to know</legend>
                 <router-link to="/Resources" class="h-auto transform -translate-y-1 w-max">
-                    <h1 class="text-center xs:px-10 p-3  xs:py-5 rounded-lg xss:rounded-3xl bg-[#000716] text-blueGray-200" style="box-shadow:inset 0px 0px 10px 1px #FFFFFF22,0px 0px 50px 10px #00000077">My Resources</h1>
+                    <h1 class="text-center xs:px-10 p-3  xs:py-5 rounded-lg xss:rounded-3xl bg-[#000716] text-blueGray-200 " style="box-shadow:inset 0px 0px 10px 1px #FFFFFF22,0px 0px 50px 10px #00000077">My Resources</h1>
                 </router-link>
             </fieldset>
         </section>
         <footer class="mt-auto ">
-            <div class="bg-[#000716]">
+            <div class="bg-[#000716] dark:bg-lime-200">
                 <div
                     class="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row"
                 >
-                    <p class="text-sm text-center text-gray-500 sm:text-left">
+                    <p class="text-sm text-center dark:text-teal-900 text-gray-500 sm:text-left">
                         © 2021 Sukhpreet —
                         <a
                             href="https://twitter.com/Sukhpreet_LION"
@@ -91,7 +91,7 @@
                     <span
                         class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start"
                     >
-                        <a class="text-gray-500">
+                        <a class="dark:text-teal-900 text-gray-500">
                             <svg
                                 fill="currentColor"
                                 stroke-linecap="round"
@@ -105,7 +105,7 @@
                                 ></path>
                             </svg>
                         </a>
-                        <a class="ml-3 text-gray-500">
+                        <a class="ml-3 dark:text-teal-900 text-gray-500">
                             <svg
                                 fill="currentColor"
                                 stroke-linecap="round"
@@ -119,7 +119,7 @@
                                 ></path>
                             </svg>
                         </a>
-                        <a class="ml-3 text-gray-500">
+                        <a class="ml-3 dark:text-teal-900 text-gray-500">
                             <svg
                                 fill="none"
                                 stroke="currentColor"
@@ -142,7 +142,7 @@
                                 ></path>
                             </svg>
                         </a>
-                        <a class="ml-3 text-gray-500">
+                        <a class="ml-3 dark:text-teal-900 text-gray-500">
                             <svg
                                 fill="currentColor"
                                 stroke="currentColor"

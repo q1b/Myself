@@ -5,7 +5,7 @@ module.exports = {
     safelist: [
       ],
     },
-    darkMode: false, // or 'media' or 'class'
+    darkMode: 'class', // or 'media' or 'class'
     theme: {
         screens: {
             // => @media (min-width: XXXXpx) { ... }
@@ -26,8 +26,9 @@ module.exports = {
                 round:'Nova Round, cursive'
             },
             transitionProperty:{
+                'backdrop-filter':'backdrop-filter',
                 'max-height':'max-height'
-            }
+            },
         },
     },
     variants: {
