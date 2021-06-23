@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '/src/pages/Home.vue'
 import Resources from '/src/pages/Resources.vue'
 import Projects from '/src/pages/Projects.vue'
+import Blogs from '/src/pages/Blogs.vue'
 import Typewriter from '/src/pages/Projects/Typewriter.vue'
 import Tiles from '/src/pages/Projects/Tiles.vue'
 
@@ -20,6 +21,11 @@ const routes = [
         path: '/Resources',
         name: 'Resources',
         component: Resources,
+    },
+    {
+        path: '/Blogs',
+        name: 'Blogs',
+        component: Blogs,
     },
     {
         path: '/Projects/Tiles',
