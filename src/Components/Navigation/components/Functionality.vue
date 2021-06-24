@@ -1,6 +1,6 @@
 <template>
   <button
-    @click="dismiss(), changeTheme()"
+    @click="dismiss(), changeIcon(), changeTheme()"
     class="flex flex-col place-items-center focus:outline-none"
     :class="[
       'transition-max-height',
@@ -17,13 +17,17 @@
 export default {
   props: {
     show: { required: true },
+    isDarkTheme: { required: true },
   },
   methods: {
     dismiss() {
       this.$emit('update:show', !this.show)
     },
+    changeIcon() {
+      this.$emit('update:isDarkTheme', !this.isDarkTheme)
+    },
     changeTheme() {
-      if (document.body.classList.contains('light')) {
+      if (this.isDarkTheme) {
         document.body.classList.remove('light')
         document.body.classList.add('dark')
       } else {

@@ -22,9 +22,24 @@
         'w-12 flex flex-col justify-center items-center z-10 bg-blueGray-900/90 dark:bg-orange-400/90 px-1 max-h-[75%] rounded-3xl backdrop-blur-sm md:mb-10 backdrop-contrast-200 shadow-md border transition-max-height ease-out duration-1000',
       ]"
     >
-      <functionality v-model:show="show">
-        <template v-slot:icon>
+      <functionality v-model:show="show" v-model:isDarkTheme="isDarkTheme">
+        <template #icon>
+          <moon-icon
+            v-show="!isDarkTheme"
+            class="
+              text-white
+              hover:text-yellow-400
+              w-full
+              h-auto
+              flex
+              transition-opacity
+              delay-1000
+              duration-700
+              ease-out
+            "
+          />
           <sun-icon
+            v-show="isDarkTheme"
             class="
               text-white
               hover:text-yellow-400
@@ -41,7 +56,7 @@
       </functionality>
       <nav-toggle-button v-model:show="show" />
       <BlogNavigationButton v-model:show="show" tag="button">
-        <template v-slot:icon>
+        <template #icon>
           <home-icon
             v-show="!IsPathHome"
             class="
@@ -79,13 +94,19 @@
 <script>
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { SunIcon, NewspaperIcon, HomeIcon } from '@heroicons/vue/solid'
+import {
+  MoonIcon,
+  SunIcon,
+  NewspaperIcon,
+  HomeIcon,
+} from '@heroicons/vue/solid'
 import NavToggleButton from './components/NavToggleButton.vue'
 import Functionality from './components/Functionality.vue'
 import BlogNavigationButton from './components/BlogNavigationButton.vue'
 export default {
   components: {
     SunIcon,
+    MoonIcon,
     HomeIcon,
     NewspaperIcon,
     NavToggleButton,
@@ -104,13 +125,16 @@ export default {
         return false
       }
     })
-    // console.log(IsPathHome)
+    //My Dark Theme is Light & Vice-versa
+    let isDarkTheme = ref(true)
     return {
       show,
       IsPathHome,
       windowHeight,
+      isDarkTheme,
     }
   },
 }
 </script>
+
 <style></style>
