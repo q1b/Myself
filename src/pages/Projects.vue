@@ -1,86 +1,16 @@
 <template>
   <section
-    class="bg-[#000716] w-full flex flex-col items-center pt-10 pb-96 pl-4"
+    class="
+      bg-[#000716]
+      dark:bg-purple-800
+      w-full
+      flex flex-col
+      items-center
+      pt-10
+      pb-96
+      pl-4
+    "
   >
-    <article
-      class="
-        group
-        bg-white
-        rounded-l-full
-        w-full
-        h-20
-        xss:h-24
-        sm:h-28
-        flex
-        items-center
-      "
-    >
-      <div
-        class="
-          h-16
-          w-16
-          xss:h-20
-          xss:w-20
-          sm:h-24
-          sm:w-24
-          rounded-full
-          bg-[#000716]
-          ml-4
-          flex
-          items-center
-        "
-      >
-        <div
-          class="
-            h-4
-            xss:h-6
-            pl-1
-            xss:pl-2
-            ml-1
-            xss:ml-2
-            sm:h-8
-            sm:pl-4
-            sm:ml-4
-            rounded-l-full
-            bg-white
-            flex
-            items-center
-            justify-center
-          "
-        >
-          <span
-            class="
-              w-max
-              font-bold
-              text-base
-              xss:text-base
-              sm:text-lg
-              text-sky-400
-            "
-          >
-            Tiles Project
-          </span>
-        </div>
-      </div>
-      <div
-        class="
-          h-24
-          sm:h-24
-          sm:pl-28
-          pl-10
-          w-full
-          font-jetMono font-extrabold
-          text-[#ff0030]
-          xss:text-xl
-          xs:text-2xl
-          sm:text-4xl
-          flex
-          items-center
-        "
-      >
-        <span class="hidden sm:flex">Don't Click These Boxes</span>
-      </div>
-    </article>
     <Listbox v-model="selectedShape">
       <div class="relative z-10 mt-10 self-start ml-10">
         <ListboxButton
@@ -197,32 +127,74 @@
       <grow-boxes
         unique_id="a"
         :shape="selectedShape"
-        lineColor="!bg-sky-100"
+        lineColor="bg-rose-600 dark:bg-yellow-400"
         :colors="ColorStack"
       />
       <grow-boxes
         unique_id="b"
         :shape="selectedShape"
-        lineColor="!bg-sky-100"
-		   :colors="shuffle(ColorStack)"
+        lineColor="bg-sky-100 dark:bg-sky-900"
+        :colors="ColorStack"
       />
       <grow-boxes
         unique_id="c"
         :shape="selectedShape"
-        lineColor="!bg-teal-500"
-			:colors="shuffle(ColorStack)"
+        lineColor="bg-teal-500 dark:bg-white"
+        :colors="ColorStack"
       />
       <grow-boxes
         unique_id="d"
         :shape="selectedShape"
-        lineColor="!bg-sky-900"
-		   :colors="shuffle(ColorStack)"
+        lineColor="bg-sky-900 dark:bg-red-500"
+        :colors="ColorStack"
       />
     </section>
-    <section class="mt-28 -ml-5 w-full">
-      <custom-model header='Default Exciting new features are here'  content="New feauture like Mega Pro and Super disco are availabel here,
-			You can COntact Us through any means of network NOW!" />
+    <section class="mt-28 -ml-5 w-[99vw]">
+      <custom-model
+        header="Default Exciting new features are here"
+        content="New feauture like Mega Pro and Super disco are availabel here,
+      You can COntact Us through any means of network NOW!"
+      />
     </section>
+    <h1
+      class="
+        text-2xl
+        xss:text-3xl
+        xs:text-4xl
+        sm:text-5xl
+        md:text-6xl
+        my-10 my-10
+        text-white
+        dark:text-[#4A0062]
+        underline
+      "
+    >
+      Some Self hosted Projects
+    </h1>
+    <project-card
+      :navigateTo="Project.url"
+      :key="index"
+      :webLinkName="
+        Project.index === 3 ? Project.webLinkName : Project.webLinkName
+      "
+      v-for="(Project, index) in Projects"
+    >
+      <template #date>
+        <p class="text-blueGray-600 dark:text-rose-400 ml-2">
+          {{ Project.date }}
+        </p>
+      </template>
+      <template #heading>
+        <h1 class="text-5xl dark:text-[#FF0030] mt-1 font-round font-bold">
+          {{ Project.heading }}
+        </h1>
+      </template>
+      <template #details>
+        <main class="text-blueGray-700 dark:text-rose-900 mt-2 text-xl">
+          {{ Project.details }}
+        </main>
+      </template>
+    </project-card>
   </section>
 </template>
 
@@ -238,6 +210,7 @@ import {
   Listbox,
   ListboxLabel,
 } from '@headlessui/vue'
+import ProjectCard from './ProjectComponents/Card.vue'
 export default {
   components: {
     GrowBoxes,
@@ -248,6 +221,7 @@ export default {
     Listbox,
     CheckIcon,
     SelectorIcon,
+    ProjectCard,
   },
   setup() {
     const Shapes = ['circle', 'rectangle']
@@ -265,19 +239,39 @@ export default {
       { start: 'bg-rose-500', end: 'bg-white' },
       { start: 'bg-white', end: 'bg-amber-500' },
     ]
-	function shuffle(array) {
-  		for (let i = array.length - 1; i > 0; i--) {
-   		 let j = Math.floor(Math.random() * (i + 1));
-   	 	[array[i], array[j]] = [array[j], array[i]];
-  			}
-		return array
-	}
+    const Projects = [
+      {
+        index: 1,
+        url: 'https://tailhelper.netlify.app',
+        date: '22nd March 2021',
+        heading: 'Color Pallete Generator',
+        details:
+          "I create this tool for developers who are using tailwindcss in their project and wanted to use custom color pallete in their website. This tool is created with love and Give Full customisation to you as a developer to create use it in your project. I know it's seems a small project to many of us but I feel that Even if I came up with a small idea, atleast in this process of making this project working I learn a lot about Vuejs as a beginner in Vue environment I used Vuejs Tailwindcss and Vitejs for this Single page website.",
+      },
+      {
+        index: 2,
+        url: '#',
+        date: '1st July 2021',
+        heading: 'An Spiritual Vite Book',
+        details:
+          "I write the knowledge that my head recieved from the experience and intution. I know it's not a topic related to developers or science but it's more than that it's about Life,Mind and Our mind. It give deeper knowledge of Universal consiousness. It's my thought but I will also thought of some of the great people in this book, I write this book with the help of documentation tool like vitepress which make the process of writing more exclusive .",
+      },
+      {
+        index: 3,
+        url: 'https://marketplace.visualstudio.com/items?itemName=divyamrit.calm',
+        date: '1st April 2021',
+        webLinkName: 'Check it Out !',
+        heading: 'An VsCode Dark Theme',
+        details:
+          "I was from last year, looking for a great theme for my VsCode developer environment which In which I feel as home and clam. So, I started change my vsCode theme settings from setting.json And those confrigation become large one then, I want to make my own theme You can Visit it And try it's very Dark.",
+      },
+    ]
 
     return {
       Shapes,
       selectedShape,
-		ColorStack,
-		shuffle
+      ColorStack,
+      Projects,
     }
   },
 }
