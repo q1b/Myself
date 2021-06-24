@@ -1,6 +1,6 @@
 <template>
   <button
-    @click="dismiss"
+    @click="dismiss(), changeTheme()"
     class="flex flex-col place-items-center focus:outline-none"
     :class="[
       'transition-max-height',
@@ -21,6 +21,15 @@ export default {
   methods: {
     dismiss() {
       this.$emit('update:show', !this.show)
+    },
+    changeTheme() {
+      if (document.body.classList.contains('light')) {
+        document.body.classList.remove('light')
+        document.body.classList.add('dark')
+      } else {
+        document.body.classList.remove('dark')
+        document.body.classList.add('light')
+      }
     },
   },
 }
