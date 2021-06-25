@@ -131,13 +131,12 @@
         xss:px-8
         xss:py-4
         text-normal
-        bg-gradient-to-br
-        dark:bg-gradient-to-b
-        from-blue-600
+        bg-gradient-to-b
+        from-teal-900
         dark:from-emerald-400
-        via-sky-500
+        via-cyan-900
         dark:via-lime-200
-        to-lightBlue-800
+        to-sky-900
         dark:to-lime-300
         transition-colors
         duration-700
@@ -145,22 +144,23 @@
     >
       <article
         class="
-          bg-white
+          bg-cyan-300
           dark:bg-teal-900
           p-4
           xss:rounded-lg
           font-bold
-          minh100px]
+          min-h-[100px]
           transition-colors
           duration-700
         "
       >
         <h1
           class="
-            text-xl text-blue-500
+            text-xl text-blueGray-900
             dark:text-emerald-500
             transition-colors
             duration-700
+            font-bold
           "
         >
           I am a Web developer, along with learning and exploring things I am
@@ -179,7 +179,7 @@
         place-content-center
         max-h-96
         h-full
-        bg-[hsl(220,40%,10%)]
+        bg-sky-900
         dark:bg-lime-300
         transition-colors
         duration-700
@@ -339,7 +339,7 @@
 <script>
 export default {
   setup() {
-    const patternImageAnimation = 'gradient 15s ease infinite'
+    const patternImageAnimation = 'gradient 40s ease infinite'
     return {
       patternImageAnimation,
     }

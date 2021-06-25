@@ -11,8 +11,11 @@
 
   <header
     :class="[
-      right ? 'absolute top-0 right-0' : '',
-      'select-none flex flex-col justify-center md:justify-end items-center group min-w-[96px] h-[450px] xss:h-[500px] xs:h-[590px] md:h-screen md:pb-10 bg-transparent',
+      right ? 'absolute' : '',
+      IsPathHome && right
+        ? 'top-0 right-0 h-[450px] xss:h-[500px] xs:h-[590px]'
+        : 'left-0 bottom-0 h-[200px]',
+      'select-none flex flex-col justify-center md:justify-end items-center group min-w-[96px] md:h-screen md:pb-10 bg-transparent',
     ]"
   >
     <!--h1 class=" top-[190px] xss:top-[210px] xs:top-[260px] sm:top-[260px] "></h1-->

@@ -1,0 +1,118 @@
+<template>
+	<section
+		class="
+			w-full
+			h-screen
+			dark:bg-Orange-900
+			bg-indigo-100
+			flex
+			items-center
+			justify-center
+		"
+	>
+		<article class="isolate relative w-[95%] sm:w-[60%] rounded-xl h-[500px]">
+			<div
+				class="
+					absolute
+					z-0
+					-top-12
+					-left-12
+					w-24
+					h-24
+					sm:w-96
+					sm:h-96
+					bg-indigo-300
+					dark:bg-indigo-900/50
+					rounded-full
+					blur-[40px]
+					mix-blend-multiply
+				"
+			></div>
+			<div
+				class="
+					absolute
+					z-0
+					-bottom-10
+					right-8
+					w-24
+					h-24
+					sm:w-96
+					sm:h-96
+					bg-rose-300
+					dark:bg-rose-900/50
+					rounded-full
+					blur-[40px]
+					mix-blend-multiply
+				"
+			></div>
+			<div
+				class="
+					absolute
+					z-0
+					-bottom-8
+					left-20
+					w-24
+					h-24
+					sm:w-96
+					sm:h-96
+					bg-cyan-300
+					dark:bg-cyan-900/50
+					rounded-full
+					blur-[40px]
+					mix-blend-multiply
+				"
+			></div>
+			<div
+				class="
+					absolute
+					-top-4
+					right-20
+					w-24
+					h-24
+					sm:w-96
+					sm:h-96
+					bg-green-400
+					dark:bg-teal-900/50
+					rounded-full
+					blur-[40px]
+					mix-blend-multiply
+				"
+			></div>
+			<div
+				class="
+					flex flex-col
+					rounded-xl
+					bg-indigo-400/70
+					dark:bg-orange-300/50
+					border-2
+					dark:border-l-orange-400
+					border-l-sky-400
+					dark:border-r-orange-400
+					border-r-sky-400
+					dark:border-t-orange-300
+					border-t-sky-300
+					dark:border-b-orange-300
+					border-b-sky-300
+					relative
+					z-10
+					w-full
+					h-full
+				"
+				style="
+					box-shadow: inset 0px 0px 30px 20px #ffffff55,
+						0px 0px 30px 20px #ffffff99;
+				"
+			>
+				<!-- <header class="w-full h-10 bg-white/70"></header> -->
+			</div>
+		</article>
+	</section>
+</template>
+<script>
+export default {
+	name: 'Contacts',
+	setup() {},
+}
+</script>
+
+<style lang="css" scoped></style>

@@ -2,7 +2,7 @@
   <section
     class="
       bg-[#000716]
-      dark:bg-purple-800
+      dark:bg-pink-400
       w-full
       flex flex-col
       items-center
@@ -11,6 +11,46 @@
       pl-4
     "
   >
+    <h1
+      class="
+        text-2xl
+        xss:text-3xl
+        xs:text-4xl
+        sm:text-5xl
+        md:text-6xl
+        my-10 my-10
+        text-white
+        dark:text-[#4A0062]
+        underline
+      "
+    >
+      Some Self hosted Projects
+    </h1>
+    <project-card
+      :navigateTo="Project.url"
+      :key="index"
+      :webLinkName="
+        Project.index === 3 ? Project.webLinkName : Project.webLinkName
+      "
+      v-for="(Project, index) in Projects"
+    >
+      <template #date>
+        <p class="text-blueGray-600 dark:text-rose-400 ml-2">
+          {{ Project.date }}
+        </p>
+      </template>
+      <template #heading>
+        <h1 class="text-5xl dark:text-[#FF0030] mt-1 font-round font-bold">
+          {{ Project.heading }}
+        </h1>
+      </template>
+      <template #details>
+        <main class="text-blueGray-700 dark:text-rose-900 mt-2 text-xl">
+          {{ Project.details }}
+        </main>
+      </template>
+    </project-card>
+
     <Listbox v-model="selectedShape">
       <div class="relative z-10 mt-10 self-start ml-10">
         <ListboxButton
@@ -156,45 +196,6 @@
       You can COntact Us through any means of network NOW!"
       />
     </section>
-    <h1
-      class="
-        text-2xl
-        xss:text-3xl
-        xs:text-4xl
-        sm:text-5xl
-        md:text-6xl
-        my-10 my-10
-        text-white
-        dark:text-[#4A0062]
-        underline
-      "
-    >
-      Some Self hosted Projects
-    </h1>
-    <project-card
-      :navigateTo="Project.url"
-      :key="index"
-      :webLinkName="
-        Project.index === 3 ? Project.webLinkName : Project.webLinkName
-      "
-      v-for="(Project, index) in Projects"
-    >
-      <template #date>
-        <p class="text-blueGray-600 dark:text-rose-400 ml-2">
-          {{ Project.date }}
-        </p>
-      </template>
-      <template #heading>
-        <h1 class="text-5xl dark:text-[#FF0030] mt-1 font-round font-bold">
-          {{ Project.heading }}
-        </h1>
-      </template>
-      <template #details>
-        <main class="text-blueGray-700 dark:text-rose-900 mt-2 text-xl">
-          {{ Project.details }}
-        </main>
-      </template>
-    </project-card>
   </section>
 </template>
 
@@ -228,16 +229,16 @@ export default {
     const selectedShape = ref(Shapes[0])
     const ColorStack = [
       { start: 'bg-amber-500', end: 'bg-orange-500' },
-      { start: 'bg-orange-500', end: 'bg-lime-400' },
-      { start: 'bg-lime-400', end: 'bg-green-500' },
-      { start: 'bg-green-500', end: 'bg-emerald-500' },
-      { start: 'bg-emerald-500', end: 'bg-cyan-500' },
-      { start: 'bg-cyan-500', end: 'bg-blue-500' },
-      { start: 'bg-blue-500', end: 'bg-indigo-500' },
-      { start: 'bg-indigo-500', end: 'bg-purple-500' },
-      { start: 'bg-purple-500', end: 'bg-pink-500' },
-      { start: 'bg-rose-500', end: 'bg-white' },
-      { start: 'bg-white', end: 'bg-amber-500' },
+      { start: 'bg-white', end: 'bg-lime-400' },
+      { start: 'bg-blueGray-900', end: 'bg-green-500' },
+      { start: 'bg-amber-300', end: 'bg-emerald-500' },
+      { start: 'bg-yellow-500', end: 'bg-cyan-500' },
+      { start: 'bg-indigo-500', end: 'bg-blue-500' },
+      { start: 'bg-green-500', end: 'bg-indigo-500' },
+      { start: 'bg-orange-500', end: 'bg-purple-500' },
+      { start: 'bg-emerald-500', end: 'bg-pink-500' },
+      { start: 'bg-indigo-500', end: 'bg-white' },
+      { start: 'bg-white', end: 'bg-blue-500' },
     ]
     const Projects = [
       {
