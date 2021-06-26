@@ -7,7 +7,7 @@
       flex flex-col
       items-center
       pt-10
-      pb-96
+      pb-10
       pl-4
       transition-colors
       duration-700
@@ -21,7 +21,6 @@
         sm:text-5xl
         md:text-6xl
         my-10
-        py-2
         border-b-2 border-transparent
         hover:border-blueGray-200
         transition-colors

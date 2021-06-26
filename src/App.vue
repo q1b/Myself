@@ -3,7 +3,7 @@
   <div class="flex">
     <div
       ref="draggableContainer"
-      class="h-screen relative"
+      class="h-screen hidden md:flex relative"
       id="draggable-container"
     >
       <header
@@ -20,7 +20,7 @@
       </transition>
     </router-view>
 
-    <header class="md:sticky md:hidden top-0 left-0 z-40 w-0 h-screen">
+    <header class="sticky md:hidden top-0 left-0 z-40 w-0 h-screen">
       <main-header :right="true"></main-header>
     </header>
   </div>
