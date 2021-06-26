@@ -21,7 +21,9 @@
     </router-view>
 
     <header class="sticky md:hidden top-0 left-0 z-40 w-0 h-screen">
-      <main-header :right="true"></main-header>
+      <div class="">
+        <main-header :right="true"></main-header>
+      </div>
     </header>
   </div>
 </template>

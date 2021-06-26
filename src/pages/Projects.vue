@@ -21,7 +21,6 @@
         sm:text-5xl
         md:text-6xl
         my-10
-        border-b-2 border-transparent
         hover:border-blueGray-200
         transition-colors
         duration-700
@@ -53,7 +52,6 @@
           dark:bg-pink-200
           dark:selection:bg-pink-500
           dark:selection:text-white
-          pr-1
         "
         >sted Projects
       </span>
