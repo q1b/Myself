@@ -1,14 +1,14 @@
 <template>
-  <teleport to="#BackgroundBlur">
+  <!--   <teleport to="#BackgroundBlur">
     <section
       :class="[
-        show ? 'bg-transparent' : 'bg-black/25 backdrop-blur-[0.5px] !z-40',
+        show ? 'bg-transparent' : 'bg-black/25 backdrop-blur-[0.5px] !z-50',
         'block z-0 min-w-full absolute transition-colors ease-out duration-1000',
       ]"
       :style="{ height: `${windowHeight}px` }"
     ></section>
   </teleport>
-
+ -->
   <header
     :class="[
       right ? 'absolute' : '',

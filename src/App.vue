@@ -14,11 +14,7 @@
       </header>
     </div>
 
-    <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component"></component>
-      </transition>
-    </router-view>
+    <router-view />
 
     <header class="sticky md:hidden top-0 left-0 z-40 w-0 h-screen">
       <div class="">
@@ -75,27 +71,4 @@ export default {
 }
 </script>
 
-<style>
-.fade-enter-from {
-  opacity: 0.2;
-}
-.fade-enter-active {
-  transition-property: opacity;
-  transition-duration: 303ms;
-  transition-timing-function: cubic-bezier(0.24, 1, 0.56, 0.64);
-}
-.fade-enter-to {
-  opacity: 1;
-}
-.fade-leave-from {
-  opacity: 1;
-}
-.fade-leave-active {
-  transition-property: opacity;
-  transition-duration: 163ms;
-  transition-timing-function: cubic-bezier(0.24, 1, 0.56, 0.8);
-}
-.fade-leave-to {
-  opacity: 0.2;
-}
-</style>
+<style></style>
