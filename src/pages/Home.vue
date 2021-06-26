@@ -132,11 +132,11 @@
         xss:py-4
         text-normal
         bg-gradient-to-b
-        from-teal-900
+        from-Sea-500
         dark:from-emerald-400
-        via-cyan-900
+        via-Sea-600
         dark:via-lime-200
-        to-sky-900
+        to-Sea-500
         dark:to-lime-300
         transition-colors
         duration-700
@@ -144,7 +144,7 @@
     >
       <article
         class="
-          bg-cyan-300
+          bg-Sea-50
           dark:bg-teal-900
           p-4
           xss:rounded-lg
@@ -156,7 +156,7 @@
       >
         <h1
           class="
-            text-xl text-blueGray-900
+            text-xl text-Sea-800
             dark:text-emerald-500
             transition-colors
             duration-700
@@ -179,7 +179,7 @@
         place-content-center
         max-h-96
         h-full
-        bg-sky-900
+        bg-Sea-500
         dark:bg-lime-300
         transition-colors
         duration-700
@@ -339,7 +339,7 @@
 <script>
 export default {
   setup() {
-    const patternImageAnimation = 'gradient 40s ease infinite'
+    const patternImageAnimation = 'gradient 40s ease-in-out infinite'
     return {
       patternImageAnimation,
     }

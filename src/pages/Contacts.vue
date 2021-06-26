@@ -3,7 +3,7 @@
 		class="
 			w-full
 			h-screen
-			dark:bg-Orange-900
+			dark:bg-Sea-50
 			bg-indigo-100
 			flex
 			items-center
@@ -22,7 +22,7 @@
 					sm:w-96
 					sm:h-96
 					bg-indigo-300
-					dark:bg-indigo-900/50
+					dark:bg-Sea-900/50
 					rounded-full
 					blur-[40px]
 					mix-blend-multiply
@@ -83,16 +83,16 @@
 					flex flex-col
 					rounded-xl
 					bg-indigo-400/70
-					dark:bg-orange-300/50
-					border-2
-					dark:border-l-orange-400
-					border-l-sky-400
-					dark:border-r-orange-400
-					border-r-sky-400
-					dark:border-t-orange-300
-					border-t-sky-300
-					dark:border-b-orange-300
-					border-b-sky-300
+					dark:bg-Sea-300/50
+					border-4
+					dark:border-l-Sea-400
+					border-l-indigo-400
+					dark:border-r-Sea-400
+					border-r-indigo-400
+					dark:border-t-Sea-300
+					border-t-indigo-300
+					dark:border-b-Sea-300
+					border-b-indigo-300
 					relative
 					z-10
 					w-full

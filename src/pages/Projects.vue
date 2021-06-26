@@ -9,6 +9,8 @@
       pt-10
       pb-96
       pl-4
+      transition-colors
+      duration-700
     "
   >
     <h1
@@ -18,13 +20,44 @@
         xs:text-4xl
         sm:text-5xl
         md:text-6xl
-        my-10 my-10
-        text-white
-        dark:text-[#4A0062]
-        underline
+        my-10
+        py-2
+        border-b-2 border-transparent
+        hover:border-blueGray-200
+        transition-colors
+        duration-700
+        dark:selection:bg-white
+        bg-white
+        dark:bg-pink-600
       "
     >
-      Some Self hosted Projects
+      <span
+        class="
+          text-gray-50
+          bg-blueGray-900
+          dark:bg-pink-500
+          dark:text-white
+          dark:selection:text-rose-600
+          dark:selection:bg-white
+          ml-1
+        "
+      >
+        Some Self ho</span
+      >
+      <span
+        class="
+          bg-gray-50
+          text-blueGray-900
+          selection:text-gray-50
+          selection:bg-blueGray-900
+          dark:text-pink-500
+          dark:bg-pink-200
+          dark:selection:bg-pink-500
+          dark:selection:text-white
+          pr-1
+        "
+        >sted Projects
+      </span>
     </h1>
     <project-card
       :navigateTo="Project.url"
@@ -35,17 +68,47 @@
       v-for="(Project, index) in Projects"
     >
       <template #date>
-        <p class="text-blueGray-600 dark:text-rose-400 ml-2">
+        <p
+          class="
+            text-blueGray-600
+            dark:text-rose-400
+            selection:bg-blueGray-900
+            dark:selection:bg-rose-900
+            dark:selection:text-white
+            ml-2
+          "
+        >
           {{ Project.date }}
         </p>
       </template>
       <template #heading>
-        <h1 class="text-5xl dark:text-[#FF0030] mt-1 font-round font-bold">
+        <h1
+          class="
+            text-5xl
+            dark:text-[#FF0030]
+            mt-1
+            font-round font-bold
+            transition-colors
+            duration-700
+            dark:selection:bg-rose-900
+          "
+        >
           {{ Project.heading }}
         </h1>
       </template>
       <template #details>
-        <main class="text-blueGray-700 dark:text-rose-900 mt-2 text-xl">
+        <main
+          class="
+            text-blueGray-700
+            dark:text-rose-900
+            mt-2
+            text-xl
+            transition-colors
+            duration-700
+            selection:bg-blueGray-200
+            dark:selection:bg-rose-200
+          "
+        >
           {{ Project.details }}
         </main>
       </template>

@@ -2,8 +2,8 @@
   "name": "starter-template",
   "version": "0.0.0",
   "scripts": {
-    "dev": "npm-run-all --parallel dev:*",
-    "dev:server": "vite",
+    "dev:tailwind-cli-use": "npm-run-all --parallel dev:*",
+    "dev": "vite",
     "dev:css": "tailwindcss -o src/index.css --watch",
     "build": "vite build",
     "serve": "vite preview"
@@ -20,12 +20,13 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.1.1",
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.2.6",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.9.0",
+    "postcss": "^8.3.5",
     "prettier": "^2.3.0",
-    "tailwindcss": "^2.2.2",
+    "tailwindcss": "^2.2.4",
     "vite": "^2.3.8"
   }
 }
