@@ -81,7 +81,9 @@
       <template #heading>
         <h1
           class="
-            text-5xl
+            text-3xl
+            xs:text-4xl
+            sm:text-5xl
             dark:text-[#FF0030]
             mt-1
             font-round font-bold
@@ -99,7 +101,9 @@
             text-blueGray-700
             dark:text-rose-900
             mt-2
-            text-xl
+            text-base
+            xss:text-lg
+            sm:text-xl
             transition-colors
             duration-700
             selection:bg-blueGray-200
