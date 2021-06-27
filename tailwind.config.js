@@ -91,7 +91,7 @@ module.exports = {
       },
     },
     textShadow: {
-      'light-home-h1': '0px 0px 10px #99ffff44, 0px 0px 20px #00afff',
+      'light-home-h1': '0px 0px 1px #81f4ff, 0px 0px 20px #00e8fe',
       'light-home-p': '0px 0px 10px #9ff, 0px 0px 10px #0ff',
       'dark-home-p': '0px 0px 10px #CAFF5F, 0px 0px 10px #00FF84',
       'dark-home-h1': '0px 0px 1px #00FF84, 0px 0px 20px #00FF84',

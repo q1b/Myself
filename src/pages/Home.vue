@@ -52,8 +52,8 @@
           <span
             class="
               block
-              text-white
-              dark:text-shadow-dark-home-p
+              text-lightBlue-50
+              dark:text-white dark:text-shadow-dark-home-p
               text-shadow-light-home-p
             "
             >Singh</span
