@@ -16,12 +16,8 @@
         <article>
           <div
             class="
-              transform
-              translate-x-72
-              opacity-90
-              bg-gray-300
-              scale-x-95
               boxElement
+              translate-x-72
               relative
               grid
               items-start
@@ -180,19 +176,9 @@ export default {
     function handleIntersect(entries, observer) {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          entry.target.classList.add(
-            '!bg-white',
-            '!translate-x-0',
-            '!scale-100',
-            '!opacity-100'
-          )
+          entry.target.classList.add('!translate-x-0')
         } else {
-          entry.target.classList.remove(
-            '!bg-white',
-            '!translate-x-0',
-            '!scale-100',
-            '!opacity-100'
-          )
+          entry.target.classList.remove('!translate-x-0')
         }
       }
     }
