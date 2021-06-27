@@ -157,9 +157,12 @@ export default {
       }
       return ret
     }
-    const numSteps = 20.0
-    let boxElements
-    let prevRatio = 0.0
+    function ActiveCircle() {
+      return '<svg viewBox="0 0 12 12" class="w-3 h-3 mr-6 overflow-visible text-cyan-400 dark:text-teal-900"> <circle class="animate-pulse" cx="6" cy="6" r="6" fill="currentColor"></circle> <circle cx="6" cy="6" r="11" fill="none" stroke="currentColor" strokeWidth="2"></circle> <path d="M 6 18 V 500" fill="none" strokeWidth="2" stroke="currentColor" class="text-gray-200 dark:text-teal-50"></path></svg>'
+    }
+    function InActiveCircle() {
+      return '<svg viewBox="0 0 12 12" class ="w-3 h-3 mr-6 overflow-visible text-gray-300 dark:text-teal-100"> <circle cx="6" cy="6" r="6" fill="currentColor"></circle> <path d="M 6 18 V 500" fill="none" strokeWidth="2" stroke="currentColor" class="text-gray-200 dark:text-teal-50 " ></path></svg>'
+    }
     // Set things up
     // window.addEventListener(
     //   'load',
@@ -167,12 +170,9 @@ export default {
     //   },
     //   false
     // )
-    function ActiveCircle() {
-      return '<svg viewBox="0 0 12 12" class="w-3 h-3 mr-6 overflow-visible text-cyan-400 dark:text-teal-900 "> <circle cx="6" cy="6" r="6" fill="currentColor"></circle> <circle cx="6" cy="6" r="11" fill="none" stroke="currentColor" strokeWidth="2"></circle> <path d="M 6 18 V 500" fill="none" strokeWidth="2" stroke="currentColor"class="text-gray-200 dark:text-teal-50"></path></svg>'
-    }
-    function InActiveCircle() {
-      return '<svg viewBox="0 0 12 12" class ="w-3 h-3 mr-6 overflow-visible text-gray-300 dark:text-teal-100"> <circle cx="6" cy="6" r="6" fill="currentColor"></circle> <path d="M 6 18 V 500" fill="none" strokeWidth="2" stroke="currentColor" class="text-gray-200 dark:text-teal-50" ></path></svg>'
-    }
+    const numSteps = 20.0
+    let boxElements
+    let prevRatio = 0.0
 
     function handleIntersect(entries, observer) {
       for (const entry of entries) {

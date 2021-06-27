@@ -16,7 +16,22 @@
 			place-content-around
 		"
 	>
-		<article class="mt-5 bg-white rounded-lg px-6 w-[95%] sm:w-[80%] py-4">
+		<article
+			class="
+				projectElement
+				opacity-0
+				mt-5
+				bg-white
+				rounded-lg
+				px-6
+				w-[95%]
+				sm:w-[80%]
+				py-4
+				transition-opacity
+				duration-1000
+				ease-out
+			"
+		>
 			<slot name="date"></slot>
 			<slot name="heading"></slot>
 			<slot name="details"></slot>
@@ -60,8 +75,8 @@
 		</article>
 	</section>
 </template>
-
 <script>
+import { onMounted } from 'vue'
 export default {
 	name: 'Card',
 	props: {
@@ -73,6 +88,51 @@ export default {
 			type: String,
 			default: 'website Link !',
 		},
+	},
+	setup() {
+		const numSteps = 20.0
+		let projectElements
+		let prevRatio = 0.0
+
+		function handleIntersect(entries, observer) {
+			for (const entry of entries) {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('!opacity-100')
+				} else {
+					entry.target.classList.remove('!opacity-100')
+				}
+			}
+		}
+
+		function buildThresholdList() {
+			let thresholds = []
+			let numSteps = 20
+
+			for (let i = 1.0; i <= numSteps; i++) {
+				let ratio = i / numSteps
+				thresholds.push(ratio)
+			}
+
+			thresholds.push(0)
+			return thresholds
+		}
+
+		function createObserver(b) {
+			let options = {
+				root: null,
+				rootMargin: '0px',
+				threshold: buildThresholdList(),
+			}
+			let observer = new IntersectionObserver(handleIntersect, options)
+			observer.observe(b)
+		}
+
+		onMounted(() => {
+			projectElements = document.getElementsByClassName('projectElement')
+			Array.from(projectElements).forEach((e) => {
+				createObserver(e)
+			})
+		})
 	},
 }
 </script>
