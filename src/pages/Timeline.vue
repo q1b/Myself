@@ -20,7 +20,7 @@
               translate-x-72
               opacity-90
               bg-gray-300
-              scale-90
+              scale-x-95
               boxElement
               relative
               grid
@@ -32,9 +32,9 @@
               overflow-hidden
               rounded-xl
               transition-translate-color
-              duration-300
+              duration-700
             "
-            style="transition-timing-function: cubic-bezier(1, 0, 0, 1)"
+            style="transition-timing-function: cubic-bezier(0.4, 0.6, 0.5, 0.9)"
           >
             <h3
               class="
