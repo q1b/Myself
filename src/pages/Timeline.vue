@@ -32,7 +32,7 @@
               overflow-hidden
               rounded-xl
               transition-translate-color
-              duration-1000
+              duration-300
             "
             style="transition-timing-function: cubic-bezier(1, 0, 0, 1)"
           >

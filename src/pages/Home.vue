@@ -232,7 +232,7 @@
               text-shadow-hi
             "
           >
-            Timeline
+            Time Capsule
           </h1>
         </router-link>
       </fieldset>
