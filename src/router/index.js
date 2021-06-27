@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '/src/pages/Home.vue'
+import Timeline from '/src/pages/Timeline.vue'
 import Resources from '/src/pages/Resources.vue'
 import Projects from '/src/pages/Projects.vue'
 import Contacts from '/src/pages/Contacts.vue'
@@ -16,6 +17,11 @@ const routes = [
     path: '/Projects',
     name: 'Projects',
     component: Projects,
+  },
+  {
+    path: '/Timeline',
+    name: 'Timeline',
+    component: Timeline,
   },
   {
     path: '/Resources',

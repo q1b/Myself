@@ -29,13 +29,14 @@
       >
         <h1
           class="
-            text-6xl text-white
+            text-5xl
+            xsss:text-6xl
+            text-white
             xss:text-7xl
             xs:text-8xl
             lg:text-9xl
             font-round
           "
-          style=""
         >
           <span
             class="
@@ -156,6 +157,8 @@
       >
         <h1
           class="
+            text-lg
+            xss:text-xl
             text-xl text-Sea-800
             dark:text-emerald-500
             transition-colors
@@ -190,41 +193,46 @@
           flex
           items-center
           justify-center
-          p-2
+          py-5
+          px-1
           border-2 border-white
           dark:border-lime-200
           rounded-lg
-          xss:p-3
-          xs:p-4
-          sm:p-5
-          md:p-7
-          lg:p-10
+          xs:px-4
+          sm:px-5
+          md:px-7
+          md:py-6
+          lg:px-10
+          lg:py-7
         "
       >
-        <legend class="px-2 text-white xss:text-xl">
+        <legend class="px-2 text-white text-xl xss:text-2xl">
           You might like to know
         </legend>
         <router-link
-          to="/Resources"
+          to="/Timeline"
           class="h-auto transform -translate-y-1 w-max"
         >
           <h1
             class="
               text-center
               xs:px-10
-              p-3
+              px-5
+              py-3
               xs:py-5
-              rounded-lg
-              xss:rounded-3xl
-              bg-[#000716]
-              text-blueGray-200
-            "
-            style="
-              box-shadow: inset 0px 0px 10px 1px #ffffff22,
-                0px 0px 50px 10px #00000077;
+              rounded-3xl
+              bg-Sea-500
+              text-lg
+              xss:text-xl
+              text-white
+              font-semibold
+              tracking-wider
+              font-jetMono
+              shadow-fotter-light
+              text-shadow-hi
             "
           >
-            My Resources
+            Timeline
           </h1>
         </router-link>
       </fieldset>
