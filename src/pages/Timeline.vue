@@ -18,6 +18,7 @@
             class="
               boxElement
               translate-x-72
+              bg-white
               relative
               grid
               items-start
