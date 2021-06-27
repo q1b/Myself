@@ -13,9 +13,7 @@
         <main-header :right="false"></main-header>
       </header>
     </div>
-
     <router-view />
-
     <header class="sticky md:hidden top-0 left-0 z-40 w-0 h-screen">
       <div class="">
         <main-header :right="true"></main-header>
