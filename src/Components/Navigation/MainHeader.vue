@@ -13,8 +13,8 @@
     :class="[
       right ? 'absolute' : '',
       IsPathHome && right
-        ? 'top-0 right-0 h-[450px] xss:h-[500px] xs:h-[590px]'
-        : 'top-0 right-0 h-[450px] xss:h-[500px] xs:h-[590px]',
+        ? 'top-0 right-0 h-[400px] xsss:h-[450px] xss:h-[500px] xs:h-[590px]'
+        : 'top-0 right-0 h-[400px] xsss:h-[450px] xss:h-[500px] xs:h-[590px]',
       'select-none flex flex-col justify-center md:justify-end items-center group min-w-[96px] md:h-screen md:pb-10 bg-transparent',
     ]"
   >

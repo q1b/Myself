@@ -52,7 +52,7 @@
           <span
             class="
               block
-              text-lightBlue-50
+              text-lightBlue-100
               dark:text-white dark:text-shadow-dark-home-p
               text-shadow-light-home-p
             "
@@ -62,26 +62,29 @@
         <div class="flex mt-8 md:mt-0 md:flex-shrink-0">
           <div
             class="inline-flex rounded-md shadow"
-            style="box-shadow: 0px 0px 10px 0.5px #1c90fe99"
+            style="box-shadow: 0px 0px 10px 0.5px #1c90fe55"
           >
             <router-link
               to="/Projects"
               class="
-                inline-flex
-                items-center
-                justify-center
-                px-5
-                py-3
+                shadow
+                dark:shadow-btn-green
+                dark:hover:shadow-btn-b-green
+                dark:border dark:border-lime-300
                 text-base
                 font-medium
                 text-white
                 dark:text-teal-900
                 bg-blue-600
-                dark:bg-teal-300
-                border border-transparent
+                dark:bg-white
+                hover:bg-indigo-50
+                dark:hover:bg-teal-300
+                inline-flex
+                items-center
+                justify-center
+                px-5
+                py-3
                 rounded-md
-                hover:bg-blue-700
-                dark:hover:bg-teal-100
                 transition-colors
                 duration-300
               "
@@ -91,26 +94,27 @@
           </div>
           <div
             class="inline-flex ml-3 rounded-md shadow lg:ml-7"
-            style="box-shadow: 0px 0px 10px 0.5px #fff"
+            style="box-shadow: 0px 0px 10px 0.5px #ffffff77"
           >
             <a
               href="#"
               class="
+                font-medium
+                text-base text-blue-600
+                dark:text-teal-600
+                hover:bg-blue-700
+                bg-white
+                shadow
+                dark:hover:bg-teal-300
+                dark:hover:text-white
+                border border-transparent
                 inline-flex
                 items-center
                 justify-center
                 px-5
                 py-3
-                text-base
-                font-medium
-                text-blue-600
-                dark:text-teal-900
-                dark:shadow
-                bg-white/90
-                rounded-md
-                hover:bg-indigo-50
-                dark:hover:bg-teal-50
                 transition-colors
+                rounded-md
                 duration-300
               "
             >
@@ -229,8 +233,8 @@
               font-semibold
               tracking-wider
               font-round
-              dark:shadow-fotter-light
-              shadow-fotter-dark
+              dark:shadow-btn-green
+              shadow-btn-blue
               text-shadow-hi
             "
           >
