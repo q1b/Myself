@@ -219,6 +219,8 @@
               rounded-lg
               bg-Sea-25
               text-lg
+              py-3
+              px-3
               xss:py-3
               xss:px-5
               xss:text-xl
