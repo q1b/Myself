@@ -193,7 +193,7 @@
           flex
           items-center
           justify-center
-          py-5
+          py-3
           px-1
           border-2 border-white
           dark:border-lime-200
@@ -216,19 +216,19 @@
           <h1
             class="
               text-center
-              xs:px-10
-              px-5
-              py-3
-              xs:py-5
-              rounded-3xl
-              bg-Sea-500
+              rounded-lg
+              bg-Sea-25
               text-lg
+              xss:py-3
+              xss:px-5
               xss:text-xl
-              text-white
+              text-Sea-900
+              dark:text-teal-900
               font-semibold
               tracking-wider
-              font-jetMono
-              shadow-fotter-light
+              font-round
+              dark:shadow-fotter-light
+              shadow-fotter-dark
               text-shadow-hi
             "
           >

@@ -120,7 +120,7 @@ export default {
   setup() {
     const router = useRouter()
     const windowHeight = document.body.offsetHeight
-    let show = ref(true)
+    let show = ref(false)
     let IsPathHome = computed(() => {
       if (router.currentRoute.value.path === '/') {
         return true
@@ -128,7 +128,8 @@ export default {
         return false
       }
     })
-    //My Dark Theme is Light & Vice-versa
+    //For Instially Light Theme Change THis
+    // let isDarkTheme = ref(false)
     let isDarkTheme = ref(true)
     return {
       show,

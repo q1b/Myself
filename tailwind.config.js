@@ -85,9 +85,9 @@ module.exports = {
       },
       boxShadow: {
         'fotter-light':
-          'inset 0px 0px 10px 1px #1ffff1AA,inset 0px 0px 10px 1px #FFFFFF77,0px 0px 50px 10px #10FfF022',
+          'inset 0px 0px 10px 1px #ffffff,inset 0px 0px 50px 10px #AAFF80',
         'fotter-dark':
-          'inset 0px 0px 10px 1px #ffffff,0px 0px 50px 10px #AAFF80',
+          'inset 0px 0px 10px 1px #ffffff,inset 0px 0px 50px 10px #9aFFf0',
       },
     },
     textShadow: {
