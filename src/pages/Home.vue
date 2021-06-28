@@ -60,10 +60,7 @@
           >
         </h1>
         <div class="flex mt-8 md:mt-0 md:flex-shrink-0">
-          <div
-            class="inline-flex relative rounded-md shadow"
-            style="box-shadow: 0px 0px 10px 0.5px #1c90fe55"
-          >
+          <div class="inline-flex relative rounded-md shadow">
             <router-link
               to="/Projects"
               class="
@@ -74,9 +71,9 @@
                 before:right-0
                 before:bottom-0
                 before:rounded-lg
-                before:opacity-30
+                before:opacity-0
                 before:shadow-skyD-600
-                hover:before:opacity-50
+                hover:before:opacity-40
                 before:transition-opacity
                 before:duration-700
                 before:ease-in-out
@@ -102,7 +99,6 @@
                 bg-blue-600
                 text-white
                 dark:bg-white
-                hover:text-white
                 dark:hover:bg-teal-300
                 inline-flex
                 items-center
@@ -116,10 +112,7 @@
               Projects
             </router-link>
           </div>
-          <div
-            class="inline-flex ml-3 rounded-md shadow lg:ml-7"
-            style="box-shadow: 0px 0px 10px 0.5px #ffffff77"
-          >
+          <div class="inline-flex ml-3 rounded-md shadow lg:ml-7">
             <a
               href="#"
               class="
@@ -128,9 +121,8 @@
                 dark:text-teal-900 dark:text-teal-600
                 hover:bg-gray-200
                 bg-white/90
-                shadow
-                hover:shadow-sky-300
-                dark:hover:bg-teal-300
+                hover:shadow-skyD-200
+                dark:hover:bg-teal-600
                 dark:hover:text-white
                 dark:hover:shadow
                 border border-transparent
