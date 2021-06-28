@@ -61,23 +61,48 @@
         </h1>
         <div class="flex mt-8 md:mt-0 md:flex-shrink-0">
           <div
-            class="inline-flex rounded-md shadow"
+            class="inline-flex relative rounded-md shadow"
             style="box-shadow: 0px 0px 10px 0.5px #1c90fe55"
           >
             <router-link
               to="/Projects"
               class="
-                shadow
+                before:content-['']
+                before:absolute
+                before:top-0
+                before:left-0
+                before:right-0
+                before:bottom-0
+                before:rounded-lg
+                before:opacity-30
+                before:shadow-skyD-600
+                hover:before:opacity-50
+                before:transition-opacity
+                before:duration-700
+                before:ease-in-out
+                dark:before:content-['']
+                dark:before:absolute
+                dark:before:top-0
+                dark:before:left-0
+                dark:before:right-0
+                dark:before:bottom-0
+                dark:before:rounded-lg
+                dark:before:opacity-0
+                dark:before:shadow-btn-b-green
+                dark:before:transition-opacity
+                dark:before:duration-700
+                dark:before:ease-in-out
+                dark:hover:before:opacity-0
                 dark:shadow-btn-green
-                dark:hover:shadow-btn-b-green
                 dark:border dark:border-lime-300
                 text-base
                 font-medium
-                text-white
                 dark:text-teal-900
+                font-semibold
                 bg-blue-600
+                text-white
                 dark:bg-white
-                hover:bg-indigo-50
+                hover:text-white
                 dark:hover:bg-teal-300
                 inline-flex
                 items-center
@@ -86,7 +111,6 @@
                 py-3
                 rounded-md
                 transition-colors
-                duration-300
               "
             >
               Projects
@@ -101,12 +125,14 @@
               class="
                 font-medium
                 text-base text-blue-600
-                dark:text-teal-600
-                hover:bg-blue-700
-                bg-white
+                dark:text-teal-900 dark:text-teal-600
+                hover:bg-gray-200
+                bg-white/90
                 shadow
+                hover:shadow-sky-300
                 dark:hover:bg-teal-300
                 dark:hover:text-white
+                dark:hover:shadow
                 border border-transparent
                 inline-flex
                 items-center
@@ -163,7 +189,7 @@
           class="
             text-lg
             xss:text-xl
-            text-xl text-Sea-800
+            text-Sea-800
             dark:text-emerald-500
             transition-colors
             duration-700
