@@ -72,7 +72,7 @@
                 before:bottom-0
                 before:rounded-lg
                 before:opacity-0
-                before:shadow-skyD-600
+                before:shadow-green-400-blue-600
                 hover:before:opacity-40
                 before:transition-opacity
                 before:duration-700
@@ -93,7 +93,6 @@
                 dark:shadow-btn-green
                 dark:border dark:border-lime-300
                 text-base
-                font-medium
                 dark:text-teal-900
                 font-semibold
                 bg-blue-600
@@ -118,10 +117,10 @@
               class="
                 font-medium
                 text-base text-blue-600
-                dark:text-teal-900 dark:text-teal-600
+                dark:text-teal-900
                 hover:bg-gray-200
                 bg-white/90
-                hover:shadow-skyD-200
+                hover:shadow-blue-300-blueGray-200
                 dark:hover:bg-teal-600
                 dark:hover:text-white
                 dark:hover:shadow

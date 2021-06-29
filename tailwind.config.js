@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const plugin = require('tailwindcss/plugin')
 const colors = require('tailwindcss/colors')
-const createBoxShadowStorage = require('./BoxShadow')
+// const boxShadowAll = require('./BoxShadow')
 module.exports = {
   mode: 'jit',
   purge: {
@@ -94,7 +94,7 @@ module.exports = {
           'inset 0px 0px 10px 1px #ffffff,inset 0px 0px 50px 10px #9aFFf0',
         'btn-dblue':
           'inset 0px 0px 10px 1px #ffffff,inset 0px 0px 50px 10px #6aFFff55',
-        ...createBoxShadowStorage(colors),
+        // ...boxShadowAll,
       },
     },
     textShadow: {
@@ -124,5 +124,6 @@ module.exports = {
       )
       addUtilities(textShadowUtilities)
     }),
+    require('tailboxshadow'),
   ],
 }

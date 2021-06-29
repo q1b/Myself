@@ -306,9 +306,17 @@ export default {
     ]
     const Projects = [
       {
+        index: 0,
+        url: 'https://tailboxshadow.vercel.app',
+        date: '29th June 2021',
+        heading: 'My First Plugin',
+        details:
+          "I created a tailwindcss plugin, And lunch it's official site to help others too. It's awesome experience level button without background color but with shadows it's can be act as next trend if someone give sometime to these button and make them more live. I feel grateful to have such mind which give me inspiration to what i should do . I love you all my friends .",
+      },
+      {
         index: 1,
         url: 'https://tailhelper.netlify.app',
-        date: '22nd March 2021',
+        date: '13th June 2021',
         heading: 'Color Pallete Generator',
         details:
           "I create this tool for developers who are using tailwindcss in their project and wanted to use custom color pallete in their website. This tool is created with love and Give Full customisation to you as a developer to create use it in your project. I know it's seems a small project to many of us but I feel that Even if I came up with a small idea, atleast in this process of making this project working I learn a lot about Vuejs as a beginner in Vue environment I used Vuejs Tailwindcss and Vitejs for this Single page website.",
