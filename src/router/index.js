@@ -3,6 +3,7 @@ import Home from '/src/pages/Home.vue'
 import Timeline from '/src/pages/Timeline.vue'
 import Resources from '/src/pages/Resources.vue'
 import Projects from '/src/pages/Projects.vue'
+import Skills from '/src/pages/Skills.vue'
 import Contacts from '/src/pages/Contacts.vue'
 import Blogs from '/src/pages/Blogs.vue'
 import Typewriter from '/src/pages/Projects/Typewriter.vue'
@@ -17,6 +18,11 @@ const routes = [
     path: '/Projects',
     name: 'Projects',
     component: Projects,
+  },
+  {
+    path: '/Skills',
+    name: 'Skills',
+    component: Skills,
   },
   {
     path: '/Timeline',

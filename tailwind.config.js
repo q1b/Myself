@@ -9,6 +9,7 @@ module.exports = {
       './index.html',
       './src/**/*.{vue,js,ts,jsx,tsx}',
       './Navigation/**/*.{vue,js,ts,jsx,tsx}',
+      './src/Pages/**/*.{vue,js,ts,jsx,tsx}',
     ],
     safelist: [],
   },

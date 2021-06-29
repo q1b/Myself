@@ -112,8 +112,8 @@
             </router-link>
           </div>
           <div class="inline-flex ml-3 rounded-md shadow lg:ml-7">
-            <a
-              href="#"
+            <router-link
+              to="/Skills"
               class="
                 font-medium
                 text-base text-blue-600
@@ -136,7 +136,7 @@
               "
             >
               Skills
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
