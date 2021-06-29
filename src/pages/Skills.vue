@@ -33,17 +33,14 @@
 					px-10
 				"
 			>
-				<Card :list="list">
+				<Card v-for="(card, index) in CardList" :key="index" :list="card.list">
 					<template #mainIcon>
-						<LightningBoltIcon class="text-indigo-600 w-20 h-20" />
+						<component
+							:class="[`${card.iconColor}`, 'w-20 h-auto']"
+							:is="card.icon"
+						></component>
 					</template>
-					<template #heading> DesignTools </template>
-				</Card>
-				<Card :list="list">
-					<template #mainIcon>
-						<LightningBoltIcon class="text-indigo-600 w-20 h-20" />
-					</template>
-					<template #heading> Languages </template>
+					<template #heading> {{ card.heading }} </template>
 				</Card>
 			</section>
 		</section>
@@ -51,16 +48,69 @@
 </template>
 
 <script>
-import { IdentificationIcon, CheckCircleIcon } from '@heroicons/vue/outline'
-import { LightningBoltIcon } from '@heroicons/vue/solid'
 import Card from './SkillsComponents/Card.vue'
+
+import { IdentificationIcon, CheckCircleIcon } from '@heroicons/vue/outline'
+
+import {
+	LightningBoltIcon,
+	FireIcon,
+	PencilIcon,
+	ServerIcon,
+	ChipIcon,
+	CodeIcon,
+	ColorSwatchIcon,
+} from '@heroicons/vue/solid'
+
 export default {
-	components: { Card, IdentificationIcon, LightningBoltIcon, CheckCircleIcon },
+	components: { Card, IdentificationIcon },
 	name: 'Skills',
 	data() {
 		return {
-			list: ['Figma', 'Rivejs', 'Apple'],
+			CardList: [
+				{
+					heading: 'Design-Tool',
+					icon: PencilIcon(),
+					iconColor: 'text-indigo-600',
+					list: ['Figma', 'Rivejs', 'KeyNotes'],
+				},
+				{
+					heading: 'Js-Framework',
+					icon: FireIcon(),
+					iconColor: 'text-orange-600',
+					list: ['Nuxt', 'SvelteKit', 'Reactjs', 'Vuejs'],
+				},
+				{
+					heading: 'Css-Framework',
+					icon: LightningBoltIcon(),
+					iconColor: 'text-sky-600',
+					list: ['Tailwindcss'],
+				},
+				{
+					heading: 'dev-lang',
+					icon: CodeIcon(),
+					iconColor: 'text-black',
+					list: ['Python', 'javascript', 'html', 'css'],
+				},
+				{
+					heading: 'Libraries',
+					icon: ColorSwatchIcon(),
+					iconColor: 'text-rose-600',
+					list: ['headlessUI', 'Reactjs', 'HeroIcon'],
+				},
+				{
+					heading: 'BackEnd',
+					icon: ServerIcon(),
+					iconColor: 'text-green-400',
+					list: ['Firebase'],
+				},
+			],
 		}
+	},
+	methods: {
+		icon() {
+			return IdentificationIcon
+		},
 	},
 }
 </script>
