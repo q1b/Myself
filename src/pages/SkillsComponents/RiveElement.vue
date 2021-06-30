@@ -14,7 +14,7 @@ export default {
 	mounted() {
 		new Rive({
 			canvas: this.$refs.canvas,
-			src: 'src/pages/SkillsComponents/Animations/loopAnimations.riv',
+			src: 'loopAnimations.riv',
 			artboard: this.$props.artboard,
 			autoplay: true,
 		})
