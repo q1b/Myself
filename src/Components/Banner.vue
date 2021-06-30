@@ -36,7 +36,7 @@
 			</span>
 		</section>
 		<router-link
-			v-show="!IsPathHome"
+			v-show="IsPathHome"
 			to="/Contacts"
 			class="h-10 w-full z-30 absolute bg-white/10 backdrop-blur-[0.2px] top-0"
 		>
