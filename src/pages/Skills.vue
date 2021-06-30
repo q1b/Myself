@@ -35,10 +35,7 @@
 			>
 				<Card v-for="(card, index) in CardList" :key="index" :list="card.list">
 					<template #mainIcon>
-						<component
-							:class="[`${card.iconColor}`, 'w-20 h-auto']"
-							:is="card.icon"
-						></component>
+						<rive-element :artboard="card.artboard" />
 					</template>
 					<template #heading> {{ card.heading }} </template>
 				</Card>
@@ -49,58 +46,49 @@
 
 <script>
 import Card from './SkillsComponents/Card.vue'
+import RiveElement from './SkillsComponents/RiveElement.vue'
 
 import { IdentificationIcon, CheckCircleIcon } from '@heroicons/vue/outline'
 
-import {
-	LightningBoltIcon,
-	FireIcon,
-	PencilIcon,
-	ServerIcon,
-	ChipIcon,
-	CodeIcon,
-	ColorSwatchIcon,
-} from '@heroicons/vue/solid'
-
 export default {
-	components: { Card, IdentificationIcon },
+	components: { Card, IdentificationIcon, RiveElement },
 	name: 'Skills',
 	data() {
 		return {
 			CardList: [
 				{
 					heading: 'Design-Tool',
-					icon: PencilIcon(),
+					artboard: 'Design',
 					iconColor: 'text-indigo-600',
 					list: ['Figma', 'Rivejs', 'KeyNotes'],
 				},
 				{
 					heading: 'Js-Framework',
-					icon: FireIcon(),
+					artboard: 'Framework',
 					iconColor: 'text-orange-600',
 					list: ['Nuxt', 'SvelteKit', 'Reactjs', 'Vuejs'],
 				},
 				{
 					heading: 'Css-Framework',
-					icon: LightningBoltIcon(),
+					artboard: 'ThunderBolt',
 					iconColor: 'text-sky-600',
 					list: ['Tailwindcss'],
 				},
 				{
 					heading: 'dev-lang',
-					icon: CodeIcon(),
+					artboard: 'Code',
 					iconColor: 'text-black',
 					list: ['Python', 'javascript', 'html', 'css'],
 				},
 				{
 					heading: 'Libraries',
-					icon: ColorSwatchIcon(),
+					artboard: 'Resources',
 					iconColor: 'text-rose-600',
 					list: ['headlessUI', 'Reactjs', 'HeroIcon'],
 				},
 				{
 					heading: 'BackEnd',
-					icon: ServerIcon(),
+					artboard: 'Hardware',
 					iconColor: 'text-green-400',
 					list: ['Firebase'],
 				},

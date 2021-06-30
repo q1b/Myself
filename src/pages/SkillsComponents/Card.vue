@@ -7,8 +7,7 @@
 	>
 		<!--Icon,Heading,List,-->
 		<div id="icon" class="w-full flex justify-center py-2">
-			<!-- <LightningBoltIcon class="text-indigo-600 w-20 h-20" /> -->
-			<slot name="mainIcon"> </slot>
+			<slot name="mainIcon"></slot>
 		</div>
 		<div
 			id="heading"
@@ -38,14 +37,12 @@
 
 <script>
 import { IdentificationIcon, CheckCircleIcon } from '@heroicons/vue/outline'
-import {
-	LightningBoltIcon,
-	CheckCircleIcon as SCheckCircle,
-} from '@heroicons/vue/solid'
+import { CheckCircleIcon as SCheckCircle } from '@heroicons/vue/solid'
+import RiveElement from './RiveElement.vue'
 export default {
 	components: {
+		RiveElement,
 		IdentificationIcon,
-		LightningBoltIcon,
 		CheckCircleIcon,
 		SCheckCircle,
 	},
