@@ -1,7 +1,7 @@
 <template>
 	<teleport to="#BANNER">
 		<section
-			v-show="!IsPathHome"
+			v-show="IsPathHome"
 			id="Banner"
 			class="
 				select-none
@@ -61,7 +61,7 @@ export default {
 	setup() {
 		const router = useRouter()
 		let IsPathHome = computed(() => {
-			if (router.currentRoute.value.path === '/Contacts') {
+			if (router.currentRoute.value.path === '/') {
 				return true
 			} else {
 				return false
